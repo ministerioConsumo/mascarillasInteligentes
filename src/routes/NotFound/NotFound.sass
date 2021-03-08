@@ -1,0 +1,30 @@
+@import 'src/styles/core.sass'
+[id="not-found"]
+  background-image: $primary-gradient-blue
+  color: $white
+  text-align: center
+  display: flex
+  flex-direction: column
+  section, header
+    padding: 20px
+  > header
+    display: grid
+    grid-template-columns: 1fr 50px 1fr
+    grid-template-rows: 50px
+    align-items: center
+    img
+      justify-self: center
+  h1
+    font-size: $font-size-l * 0.95
+    font-weight: lighter
+    text-transform: uppercase
+    strong
+      color: $celest
+      font-weight: lighter
+  section
+    flex: 1 1 auto
+  footer
+    padding: 30px
+    .button
+      width: 100%
+

@@ -1,0 +1,53 @@
+@import 'src/styles/core.sass'
+article.mask-card
+  display: flex
+  width: 100%
+  text-align: left
+  position: relative
+  padding: 20px
+  max-width: 380px
+  margin: auto
+  animation: fadeEnter 0.3s ease
+  .mask-image
+    flex: 0 0 auto
+    width: 120px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+  .mask-info
+    padding: 10px 20px
+    flex: 1 1 auto
+  // .name strong
+  //   font-weight: 600
+  .type
+    font-size: 15px
+    margin-bottom: 5px
+  .date
+    font-size: $font-size-l
+    font-weight: bold
+    margin: 3px 0
+    .icon
+      font-size: $font-size-s
+      margin-right: 10px
+      line-height: 1
+      margin-right: 10px
+    > span
+      vertical-align: middle
+  .last-used
+    font-size: 15px
+    margin: 3px 0
+    strong
+      font-weight: 600
+  button
+    margin-top: 5px
+    padding: 3px 8px 5px
+    border-color: rgba($white, 0.6)
+    transition: all .3s ease
+    &:disabled
+      background-color: $transparent
+    span
+      vertical-align: middle
+      font-size: 15px
+    span:not(.icon)
+      font-weight: 600
+      margin-left: 5px

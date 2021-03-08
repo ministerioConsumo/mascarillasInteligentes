@@ -1,0 +1,126 @@
+@import 'src/styles/core.sass'
+.wash-card
+  header
+    max-width: 380px
+    margin: auto
+    padding: 0 15px
+
+  a.button
+    color: $dark
+    font-size: $font-size-m
+    padding: 8px 16px
+  .title
+    text-transform: uppercase
+    margin: 0
+    font-family: "Dinot"
+    font-size: $font-size-m
+    *
+      letter-spacing: 0
+  .count
+    display: inline-block
+    padding: 0 10px 10px
+    position: relative
+    img
+      margin-right: 10px
+      vertical-align: middle
+    span, strong
+      vertical-align: middle
+      font-size: $font-size-xxl
+      font-family: "Dinot"
+    *
+      letter-spacing: 0
+    form
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      opacity: 0
+      input
+        padding: 0
+        margin: 0
+        height: 100%
+  .advice
+    padding: 12px 10px
+    max-width: 280px
+    margin: 20px auto
+    background-color: tint($pale-blue, 90%)
+    border-radius: 5px
+    h4
+      margin: 0 0 15px
+  .wash-icons
+    overflow-x: auto
+    display: flex
+    padding: 10px
+    scroll-snap-type: mandatory
+    scroll-snap-type: x mandatory
+    scroll-snap-points-x: repeat(3rem)
+    .icon-page
+      min-width: 280px
+      border: 1px solid $medium-gray
+      padding: 5px
+      border-radius: 4px
+      color: $gray
+      display: grid
+      grid-template-columns: repeat(10, 1fr)
+      align-content: start
+      gap: 4px
+      font-size: $font-size-l
+      scroll-snap-align: start
+      margin: 0 auto
+      .icon-wash.used
+        color: $blue
+      + .icon-page
+        margin-left: 20px
+  .question
+    display: inline-block
+    padding: 4px 7px
+    border-radius: 100%
+    border: 1px solid $gray
+    margin-right: 10px
+    line-height: 1
+  .actions
+    padding: 20px
+    button, .button
+      width: 100%
+      margin: 5px 0
+      font-weight: 600
+      span
+        vertical-align: middle
+      .icon, img
+        margin-right: 10px
+        max-width: 44px
+        vertical-align: middle
+    .add
+      background-color: $blue
+      color: $white
+    .edit
+      color: $blue
+      border-color: $blue
+      padding: 4px 10px
+  &.overdue
+    .add
+      background-color: $red
+  &.closed
+    header
+      display: flex
+      align-items: center
+      justify-content: space-between
+      *
+        letter-spacing: 0
+    .status
+      width: 50%
+      text-align: left
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 12px
+        right: 2px
+        bottom: 12px
+        width: 1px
+        background-color: $medium-gray
+    a.button
+      border-color: $dark
+      font-size: $font-size-m
+      font-weight: 600

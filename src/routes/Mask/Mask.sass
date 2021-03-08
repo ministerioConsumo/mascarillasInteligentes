@@ -1,0 +1,117 @@
+@import 'src/styles/core.sass'
+[id="mask"]
+  background-image: $secondary-gradient-blue
+  color: $white
+  position: relative
+  text-align: center
+  box-sizing: border-box
+  max-height: 100vh
+  display: flex
+  flex-direction: column
+  &.time-exceeded
+    background-image: $gradient-red
+    .mask-content::before
+      background-image: url('/images/red-circles.png')
+    .data h1
+      color: darken($red, 25%)
+    .switcher
+      .switch
+        color: shade($red, 20%)
+
+  > header
+    flex: 0 0 auto
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px
+    z-index: 1
+    a
+      color: $white
+      span
+        vertical-align: middle
+      .icon
+        font-size: $font-size-s
+        margin-right: 5px
+  .mask-wrapper
+    padding: 1px
+    overflow-y: auto
+    display: flex
+    flex-direction: column
+    box-sizing: border-box
+    +safari-flex('vertical')
+    max-width: 100%
+    min-width: 0
+    &.reusable
+      padding-bottom: 115px
+    + div
+      z-index: 1
+
+  button.remove
+    padding: 6px 14px 8px
+    border-color: rgba($white, 0.5)
+    span
+      vertical-align: middle
+    span:not(.icon)
+      font-size: $font-size-m
+      margin-left: 10px
+  section
+    position: relative
+    padding: 1px
+    box-sizing: border-box
+    > h1
+      font-size: $font-size-l
+      margin: 0
+    p
+      margin: 0
+      text-transform: capitalize
+  .mask-intro
+    position: relative
+    z-index: 1
+    padding: 0 5px
+  .type, .name
+    font-size: 20px
+    font-weight: 600
+  .name
+    line-height: 1.1
+  .mask-content
+    overflow: visible
+    position: relative
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      height: calc(100vh - 75px)
+      width: 100%
+      overflow: hidden
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-image: url('/images/blue-circles.png')
+      background-repeat: no-repeat
+      background-position: center
+  .mask-buttons
+    padding-top: 2vh
+    h4
+      margin-top: 0
+      font-size: $font-size-l
+    button
+      color: $dark
+      font-weight: bold
+      background-color: $white
+      width: calc(50% - 10px)
+      max-width: 110px
+      margin: 0 5px
+      box-shadow: 0 10px 20px rgba(black, 0.2)
+  .added-date
+    font-size: 18px
+    .text
+      font-weight: 100
+  .mask-image
+    +size(84px)
+    margin: 0px auto
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+  [id="time-left"]
+    margin: 4vh auto

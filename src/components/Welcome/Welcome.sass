@@ -1,0 +1,38 @@
+@import 'src/styles/core.sass'
+[id="home"]
+  .welcome
+    align-items: center
+    +safari-flex('vertical')
+    display: flex
+    flex-direction: column
+    animation: fadeEnter 0.3s ease
+    h2
+      font-weight: 100
+      max-width: 240px
+      margin: 10vh auto 0
+      strong
+        font-weight: 900
+    .welcome-animation
+      max-width: 325px
+      margin: auto
+      width: 100%
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background-color: rgba(#063585, 0.1)
+        box-shadow: 0px 0px 10px 10px rgba(#063585, 0.1)
+        border-radius: 100%
+        display: block
+        width: 180px
+        height: 3px
+        top: 70%
+        left: 50%
+        transform: translateX(-50%)
+    .animation
+      +bg-responsive-animation('/images/welcome-animation.png', 31, 2s, 325, 194, infinite)
+    img
+      max-width: 150px
+      height: 60px
+    footer
+      padding: 15px

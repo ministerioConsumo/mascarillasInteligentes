@@ -1,0 +1,95 @@
+html
+  --ion-safe-area-top: env(safe-area-inset-top)
+  --ion-safe-area-bottom: env(safe-area-inset-bottom)
+  --ion-safe-area-left: env(safe-area-inset-left)
+  --ion-safe-area-right: env(safe-area-inset-right)
+
+html, body, [id="root"], [id="app"]
+  height: 100%
+  width: 100%
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-overflow-scrolling: touch
+  -webkit-tap-highlight-color: $transparent
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+#app .page
+  padding: var(--ion-safe-area-top) var(--ion-safe-area-left) var(--ion-safe-area-bottom)
+
+.pages-transition-group
+  height: 100%
+  width: 100%
+  margin: 0
+  position: relative
+[id="app"]
+  *
+    letter-spacing: .09em
+  .page
+    margin: 0
+    padding: 1px
+    overflow: hidden
+    position: absolute
+    height: 100%
+    width: 100vw
+    background-color: $white
+  .button, button
+    border-radius: 50px
+    color: white
+    border-color: white
+    padding: 10px 20px
+    +event
+      background-color: rgba($dark, 0.05)
+  .modal-background
+    top: var(--ion-safe-area-top)
+    padding: 1px
+    z-index: 90
+    animation: fadeEnter 0.3s ease-in-out
+  .modal-foreground
+    height: 100%
+    width: 100%
+    max-height: 100%
+    max-width: 100%
+    background-color: rgba($dark, 0.8)
+    color: $white
+  .modal-content
+    padding-bottom: var(--ion-safe-area-bottom)
+  .tooltip
+    &::after
+      border-color: $white transparent transparent transparent
+    &.top, &.bottom, &.left, &.right
+      background-color: $white
+      color: $dark
+      padding: 15px
+
+
+// page animation
+
+$page-animation-duration: 500ms
+
+.page-transition-enter
+  opacity: 0
+
+  &.page-transition-enter-active
+    opacity: 1
+    transition: all $page-animation-duration ease
+
+.page-transition-exit
+  opacity: 1
+  z-index: 100
+
+  &.page-transition-exit-active
+    opacity: 0
+    transition: all $page-animation-duration ease
+
+// Data animation
+@keyframes fadeEnter
+  0%
+    opacity: 0
+  100%
+    opacity: 1

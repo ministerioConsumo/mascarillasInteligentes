@@ -1,0 +1,54 @@
+@import 'src/styles/core.sass'
+[id="remove-mask"]
+  background-image: $primary-gradient-blue
+  color: $white
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  section, footer
+    padding: 30px
+    text-align: center
+  .wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 1 1 auto
+    overflow: auto
+  .intro
+    h1
+      font-size: $font-size-xxl
+      font-weight: 100
+      text-transform: uppercase
+      color: $celest
+      text-align: center
+      margin-bottom: 0
+    h2
+      font-size: $font-size-xl
+      margin-top: 0px
+      span
+        display: block
+        margin: 4px 0
+      .type
+        font-weight: normal
+      .text
+        font-weight: 100
+  .warning
+    border: 1px solid $white
+    max-width: 330px
+    margin: 20px auto
+    padding: 0 15px
+    font-family: 'DINOT'
+    p
+      letter-spacing: 0
+  > footer
+    display: grid
+    gap: 20px
+    grid-template-columns: auto auto
+    width: 100%
+    font-weight: 600
+    button
+      background-color: $white
+      color: $dark
+      +event
+        color: $white

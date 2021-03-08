@@ -1,0 +1,95 @@
+@import 'src/styles/core.sass'
+[id="result-mask"]
+  background-image: $primary-gradient-blue
+  color: $white
+  display: flex
+  flex-direction: column
+  > header
+    display: grid
+    grid-template-columns: 1fr 42px 1fr
+    grid-template-rows: 42px
+    align-items: center
+    padding: 14px 10px
+    img
+      justify-self: center
+    a
+      justify-self: left
+      color: $white
+      span
+        vertical-align: middle
+      .icon
+        font-size: $font-size-s
+        margin-right: 5px
+  h1
+    font-size: $font-size-l * 0.95
+    font-weight: normal
+    text-transform: uppercase
+    color: $celest
+    text-align: center
+  section
+    padding: 0 30px
+  .intro
+    text-align: center
+    h2, h3
+      font-weight: 100
+      margin: 10px 0
+    h2
+      font-size: $font-size-xxl
+
+  .mask-intro
+    flex: 1 1 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-bottom: 10vh
+    overflow: auto
+  .result-card
+    display: flex
+    width: 100%
+    padding: 10px
+    max-width: 340px
+    margin: 5vh auto
+    animation: fadeEnter 0.3s ease
+    color: $white
+    border-radius: 6px
+    border: 1px solid rgba($pale-blue, 0.3)
+    .mask-image
+      flex: 0 0 auto
+      width: 80px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+    .mask-info
+      padding: 10px 5px 10px 20px
+      flex: 1 1 auto
+      max-width: 100%
+      min-width: 0
+    .name strong
+      font-weight: 600
+      font-size: 18px
+      @extend %ellipsis
+      display: block
+    .type
+      font-size: $font-size-m
+      margin-bottom: 5px
+    .date
+      font-size: $font-size-l
+      font-weight: bold
+      .icon
+        font-size: $font-size-s
+        line-height: 1
+        margin-right: 10px
+      > span
+        vertical-align: middle
+  footer
+    padding: 20px 20px 30px
+    *
+      letter-spacing: 0
+    button
+      width: 100%
+      background-color: $white
+      color: $primary-color
+      font-weight: 600
+      font-size: 20px
+      +event
+        background-color: $white

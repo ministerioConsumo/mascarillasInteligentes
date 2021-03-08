@@ -1,0 +1,93 @@
+@import 'src/styles/core.sass'
+[id="add-mask"]
+  .select-type
+    overflow: auto
+    display: flex
+    flex: 1 1 auto
+    padding: 0
+  .carousel-wrapper
+    width: 100%
+  .slide-mask
+    display: flex
+    color: $white
+    flex: 0 0 auto
+    text-align: center
+    padding: 0
+    width: 53vw
+    align-items: stretch
+    +breakpoint(tablet)
+      width: auto
+      padding: 0 30px
+    &.slide-hygienic .mask-image
+      background-image: url('/images/masks/hygienic.png')
+    &.slide-reusable-hygienic .mask-image
+      background-image: url('/images/masks/reusable-hygienic.png')
+    &.slide-ppe .mask-image
+      background-image: url('/images/masks/ppe.png')
+    &.slide-transparent .mask-image
+      background-image: url('/images/masks/transparent.png')
+    &.slide-reusable-transparent .mask-image
+      background-image: url('/images/masks/reusable-transparent.png')
+    h3
+      +breakpoint($maxHeight: 600px)
+        font-size: $font-size-m
+    p
+      max-width: 200px
+      line-height: 1.2
+      margin: auto
+    .mask-image
+      max-width: 240px
+      width: 100%
+      height: 100%
+      margin: auto
+      max-height: 30vh
+      +bg-image('/images/masks/surgical.png', contain, center)
+      +breakpoint($maxHeight: 640px)
+        max-height: 25vh
+    .eco-friendly
+      padding: 5px 10px
+      background-color: rgba($pale-blue, 0.2)
+      width: max-content
+      margin: 20px auto 0
+      font-size: 14px
+      border-radius: 3px
+      font-weight: 600
+      span
+        vertical-align: middle
+    .leaf
+      +bg-image('/images/leaf.svg', contain, center)
+      display: inline-block
+      +size(20px)
+      margin-right: 10px
+  .tooltip-wrapper
+    width: 50px
+    margin: auto
+    .tooltip
+      min-width: 240px
+      bottom: calc(100% - 2px)
+    > .icon-caution
+      margin-top: 14px
+      text-align: center
+      +size(34px)
+      padding: 4px 8px
+      background-color: #164CA6
+      color: $white
+      border-radius: 100%
+  .tooltip-content
+    font-family: "Dinot"
+    line-height: 1.3em
+    pointer-events: auto
+    h3
+      margin-top: 0
+      font-family: "Dinot"
+      font-size: $font-size-m * 1.1
+      span
+        vertical-align: middle
+    p
+      margin: 10px auto
+      font-size: 16px
+    *
+      letter-spacing: 0
+    .icon-caution
+      margin-right: 5px
+      color: $primary-color

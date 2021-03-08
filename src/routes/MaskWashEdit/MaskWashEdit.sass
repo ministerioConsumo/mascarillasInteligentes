@@ -1,0 +1,73 @@
+@import 'src/styles/core.sass'
+[id="mask-wash-edit"]
+  overflow: auto
+  background-image: $white
+  color: $black
+  display: flex
+  flex-direction: column
+  text-align: center
+  font-family: "Dinot"
+  *
+    letter-spacing: 0
+  h2
+    font-size: 19px
+    line-height: 22px
+    letter-spacing: 0.04em
+  > header
+    display: grid
+    grid-template-columns: 1fr 50px 1fr
+    grid-template-rows: 50px
+    align-items: center
+    padding: 0 10px
+    a
+      justify-self: left
+      color: $black
+      font-weight: bold
+      span
+        vertical-align: middle
+      .icon
+        font-size: $font-size-s
+        margin-right: 5px
+        color: $blue
+  .edit-details
+    overflow: auto
+    flex: 1 1 auto
+  img
+    height: 70px
+  .intro
+    padding: 0px 10px 0px
+    p
+      font-size: 17px
+      letter-spacing: 0.02em
+      padding-top: 20px
+      padding-bottom: 30px
+      max-width: 300px
+      margin: auto
+  .data-form
+    text-align: left
+    padding: 0px 30px
+    p
+      color: $blue
+      font-weight: 600
+      font-size: 16px
+      letter-spacing: 0.04em
+    input
+      letter-spacing: 0.06em
+      padding: 0px
+      background-color: white
+      border-bottom: 1px solid $form-line-gray
+      font-weight: 600
+      +placeholder
+        color: $medium-gray
+      font-size: $font-size-l
+    button
+      margin-top: 80px
+      margin-bottom: 20px
+      width: 100%
+      background-color: $dark-blue
+      color: $white
+      font-weight: bold
+      border-radius: 62px
+      font-weight: 600
+      +event
+        background-color: $dark-blue

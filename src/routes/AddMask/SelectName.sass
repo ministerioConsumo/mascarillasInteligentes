@@ -1,0 +1,35 @@
+@import 'src/styles/core.sass'
+[id="add-mask"]
+  .select-name
+    overflow: auto
+    display: flex
+    flex-direction: column
+    +safari-flex('vertical')
+    form
+      +safari-flex('vertical')
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    input
+      margin: auto
+      text-align: center
+      background-color: $transparent
+      font-size: $font-size-xxl
+      color: $white
+      padding: 1vh 0
+      +placeholder
+        color: rgba($pale-blue, 0.8)
+    .buttons
+      padding: 10vh 10px 20px
+      flex: 0 0 auto
+      display: grid
+      gap: 10px
+      grid-template-columns: 1fr 1fr
+    .continue
+      background-color: $white
+      color: $blue
+    [disabled]
+      opacity: 0.2
+
+
+

@@ -1,0 +1,31 @@
+@import 'src/styles/core.sass'
+.switcher
+  flex: 0 0 auto
+  padding: 4px
+  border-radius: 40px
+  width: 130px
+  cursor: pointer
+  position: relative
+  transition: all 0.2s ease-in-out
+  height: 68px
+  border: 1px solid $white
+  margin: auto
+  &.off
+    .switch
+      left: 4px
+  &.on
+    .switch
+      left: calc(100% - 62px)
+      background-color: $white
+  .switch
+    background-color: rgba($white, 0.3)
+    transition: all 0.2s ease-in-out
+    display: flex
+    justify-content: center
+    align-items: center
+    +size(58px)
+    border-radius: 100%
+    position: absolute
+    text-transform: uppercase
+    font-weight: bold
+    color: $blue

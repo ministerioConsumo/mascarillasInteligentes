@@ -1,0 +1,115 @@
+@import 'src/styles/core.sass'
+[id="mask-wash"]
+  background-color: $white
+  color: $black
+  font-family: "Dinot"
+  line-height: 1.25
+  *
+    letter-spacing: 0
+  display: flex
+  flex-direction: column
+  text-align: center
+  h2
+    font-size: 19px
+    line-height: 22px
+    letter-spacing: 0.04em
+  > header
+    display: grid
+    grid-template-columns: 1fr 50px 1fr
+    grid-template-rows: 50px
+    align-items: center
+    padding: 0 10px
+    flex: 0 0 auto
+    a
+      justify-self: left
+      color: $black
+      font-weight: bold
+      span
+        vertical-align: middle
+      .icon
+        font-size: $font-size-s
+        margin-right: 5px
+        color: $blue
+  .wash-info
+    overflow: auto
+    flex: 1 1 auto
+    img
+      height: 70px
+    .intro
+      padding: 10px 60px 0px
+      max-width: 450px
+      margin: auto
+      p
+        font-size: 17px
+        letter-spacing: 0.02em
+    .columns
+      padding-top: 4vh
+      display: inline-flex
+      img
+        height: 60px
+        margin-bottom: 20px
+      p
+        font-size: 15px
+        letter-spacing: 0.04em
+        max-width: 160px
+        margin: auto
+      .left
+        padding-right: 20px
+        padding-left: 15px
+        border-right: 2px solid $dark-gray
+      .right
+        padding-left: 20px
+        padding-right: 15px
+    .details
+      padding: 10px 10px 0
+      padding-top: 6vh
+      overflow: auto
+      flex: 1 1 auto
+      p
+        font-weight: bold
+        max-width: 350px
+        margin: auto
+
+    .title
+      padding-top: 25px
+      max-width: 250px
+      margin: auto
+      padding-bottom: 15px
+    .wash-count
+      background: rgba(241, 241, 241, 0.5)
+      border-radius: 2px
+      max-width: 300px
+      margin: auto
+      height: 80px
+      .count
+        padding-top: 15px
+      span
+        vertical-align: middle
+      p
+        font-size: 17px
+        line-height: 23px
+        letter-spacing: 0.02em
+        max-width: 175px
+        margin: auto
+    .wash-instructions
+      img
+        height: 40px
+      padding-top: 40px
+      max-width: 300px
+      margin: auto
+
+  footer
+    padding: 20px
+    .button
+      width: 100%
+      margin: 5px 0
+      border-color: $blue
+      color: $edit-blue
+      font-weight: 600
+      span
+        vertical-align: middle
+      .icon, img
+        height: 30px
+        margin-right: 10px
+        max-width: 44px
+        vertical-align: top

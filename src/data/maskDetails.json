@@ -1,0 +1,60 @@
+[
+  {
+    "model": "ppe",
+    "indicator": "NR",
+    "normative": "UNE EN-149",
+    "other_normatives": [
+      "KN95",
+      "NIOSH"
+    ],
+    "CE_marking" : true
+  },
+  {
+    "model": "surgical",
+    "indicator": "NR",
+    "normative": "EN 14683",
+    "other_normatives": [],
+    "CE_marking" : true,
+    "type": "Tipo I o Tipo II"
+  },
+  {
+    "model": "hygienic",
+    "indicator": "NR",
+    "normative": "UNE 0064",
+    "other_normatives": [
+      "CWA17553"
+    ],
+    "EFB" : "≥ 95",
+    "breathability": "< 60"
+  },
+  {
+    "model": "reusable-hygienic",
+    "indicator": "R",
+    "normative": "UNE 0065",
+    "other_normatives": [
+      "CWA17553"
+    ],
+    "EFB" : "≥ 90",
+    "breathability": "< 60"
+  },
+  {
+    "model": "transparent",
+    "indicator": "NR",
+    "normative": "UNE 0064",
+    "other_normatives": [
+      "CWA17553"
+    ],
+    "EFB" : "≥ 90",
+    "breathability": "< 60"
+  },
+  {
+    "model": "reusable-transparent",
+    "indicator": "R",
+    "normative": "UNE 0065",
+    "other_normatives": [
+      "CWA17553"
+    ],
+    "EFB" : "≥ 90",
+    "breathability": "< 60"
+  }
+]

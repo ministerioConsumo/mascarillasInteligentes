@@ -1,0 +1,27 @@
+@import 'src/styles/core.sass'
+.react-swipeable-view-container
+  position: relative
+  border-top-left-radius: 20px
+  border-top-right-radius: 20px
+  [class*='ReactSwipeableBottomSheet--']
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    &::before
+      content: ''
+      display: block
+      margin: 15px auto 0
+      background-color: $medium-gray
+      width: 42px
+      height: 7px
+      border-radius: 7px
+
+[id='draggable-card']
+  text-align: center
+  color: $base-font-color
+  padding: 1px
+  height: 80vh
+  .children
+    padding: 10px
+    overflow: auto
+    > *
+      margin-top: 0

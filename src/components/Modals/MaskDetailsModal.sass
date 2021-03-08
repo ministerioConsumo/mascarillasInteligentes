@@ -1,0 +1,79 @@
+@import 'src/styles/core.sass'
+[id='mask-details-modal']
+  .modal-close
+    display: none
+  div.modal-foreground
+    background-color: $white
+    color: $edit-blue
+    padding: 15px 12px
+  .modal-content
+    font-family: "Dinot"
+    height: 100%
+    display: flex
+    flex-direction: column
+
+    > header
+      display: grid
+      grid-template-columns: 1fr 50px 1fr
+      grid-template-rows: 50px
+      align-items: center
+      padding: 0 10px
+      img
+        justify-self: center
+
+    > section
+      max-width: 360px
+      margin: auto
+      *
+        letter-spacing: 0
+      h1
+        margin: 4vh 0
+        font-size: $font-size-l
+        text-transform: uppercase
+        span
+          display: block
+          margin-bottom: 5px
+      h3
+        font-weight: 600
+        font-family: "Dinot"
+    .intro
+      text-align: center
+      padding: 0 10px
+    .mask-details
+      flex: 1 1 auto
+      overflow: auto
+    .details
+      > li, .accordion
+        padding: 10px 10px 10px 25px
+        border: 1px solid $light-gray
+        position: relative
+        &::before
+          content: ''
+          display: inline-block
+          +size(8px)
+          background-color: $edit-blue
+          position: absolute
+          top: 17px
+          left: 10px
+          border-radius: 100%
+      .accordion
+        &::before
+          top: 20px
+    .no-reusable
+      text-align: center
+      background-color: $pale-blue
+      padding: 5px 10px
+      border-radius: 5px
+      font-size: 15px
+      margin-top: 9vh
+    .other-normatives
+      ul
+        padding-left: 20px
+    > footer
+      padding: 10px 20px 0
+      button
+        width: 100%
+        background-color: $blue
+        color: $white
+        border-color: $blue
+        font-weight: bold

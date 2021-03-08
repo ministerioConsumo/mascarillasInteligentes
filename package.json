@@ -1,0 +1,44 @@
+{
+  "name": "min-mask-app",
+  "version": "1.0.6",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "2.4.3",
+    "@capacitor/cli": "^2.4.3",
+    "@capacitor/core": "^2.4.3",
+    "@capacitor/ios": "2.4.3",
+    "@gluedigital/glue-styles": "^0.1.2",
+    "@gluedigital/markdown-message": "^1.1.1",
+    "@gluedigital/modal": "^1.2.0",
+    "@gluedigital/react-carousel": "^1.1.4",
+    "@gluedigital/read-more": "^0.1.0",
+    "@gluedigital/tooltip": "^1.0.2",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-intl": "^5.8.6",
+    "react-redux": "^7.2.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-swipeable-bottom-sheet": "^1.1.2",
+    "react-transition-group": "^4.4.1",
+    "universal-scripts": "^2.6.0"
+  },
+  "scripts": {
+    "start": "universal-scripts start",
+    "build": "universal-scripts build",
+    "test": "universal-scripts test",
+    "serve": "node build/server/server.js",
+    "lint": "eslint src",
+    "heroku-postbuild": "npm run build",
+    "version": "./scripts/set-version.sh $npm_package_version",
+    "build-mobile": "./scripts/build-mobile.sh",
+    "build-mobile-debug": "./scripts/build-mobile-debug.sh"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
+  "universalOptions": {
+    "noSsr": true
+  }
+}

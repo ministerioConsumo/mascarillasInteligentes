@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "splash-portrait.jpg",
+      "idiom" : "iphone"
+    },
+    {
+      "filename" : "splash-landscape.jpg",
+      "idiom" : "ipad"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

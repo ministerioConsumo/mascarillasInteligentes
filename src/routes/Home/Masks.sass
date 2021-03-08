@@ -1,0 +1,78 @@
+@import 'src/styles/core.sass'
+[id="home"]
+  .masks
+    animation: fadeEnter 0.3s ease
+    position: relative
+    display: flex
+    flex-direction: column
+    flex: 1 1 auto
+    +safari-flex('vertical')
+    max-width: 100%
+    min-width: 0
+    padding-bottom: 70px
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 30px
+      right: 30px
+      height: 2px
+      background-image: url('/images/header-separator.png')
+      background-size: 100%
+    img
+      margin: 15px 0
+      height: 60px
+    h2
+      font-weight: lighter
+      font-size: $font-size-xl * 1.25
+    h3
+      font-weight: normal
+      strong
+        font-weight: bolder
+  .masks-content
+    padding: 0 10px
+    animation: fadeEnter 0.5s ease
+    flex: 1 1 auto
+    display: flex
+    h2
+      text-align: center
+      max-width: 280px
+      margin: auto
+    .carousel-wrapper
+      flex: 1 1 auto
+      +safari-flex('vertical')
+      max-width: 100%
+      min-width: 0
+      &.loop
+        .slide:last-child article::after
+          content: ''
+          display: block
+          position: absolute
+          bottom: 0
+          left: 50px
+          right: 50px
+          height: 2px
+          background-image: url('/images/header-separator.png')
+          background-size: 100%
+      .slide
+        height: auto
+        + .slide article::before
+          content: ''
+          display: block
+          position: absolute
+          top: 0
+          left: 50px
+          right: 50px
+          height: 2px
+          background-image: url('/images/header-separator.png')
+          background-size: 100%
+  .add-mask
+    padding: 30px
+    span
+      vertical-align: middle
+      text-transform: capitalize
+    .icon
+      font-size: $font-size-xl * 1.25
+      margin-right: 10px
+      line-height: 1

@@ -1,0 +1,16 @@
+{
+  "appId": "es.gob.mscbs.masks",
+  "appName": "Mascarilla",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "build/client/",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "LocalNotifications": {
+      "smallIcon": "@mipmap/ic_notification"
+    }
+  },
+  "cordova": {}
+}

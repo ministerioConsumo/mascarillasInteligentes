@@ -1,0 +1,51 @@
+@import 'src/styles/core.sass'
+[id="add-mask"]
+  background-image: $primary-gradient-blue
+  color: $white
+  display: flex
+  flex-direction: column
+  > header
+    display: grid
+    grid-template-columns: 1fr 42px 1fr
+    grid-template-rows: 42px
+    align-items: center
+    padding: 14px 10px
+    img
+      justify-self: center
+    a
+      justify-self: left
+      color: $white
+      span
+        vertical-align: middle
+      .icon
+        font-size: $font-size-s
+        margin-right: 5px
+    button
+      justify-self: right
+      padding: 8px 12px
+      border-color: rgba(white, 0.5)
+      font-size: 15px
+      margin-left: auto
+  h1
+    font-size: $font-size-l * 0.95
+    font-weight: normal
+    text-transform: uppercase
+    color: $celest
+    text-align: center
+  h2
+    font-weight: 100
+    text-align: center
+    max-width: 340px
+    margin: 6vh auto
+    +breakpoint($maxHeight: 600px)
+      padding: 5px
+      font-size: $font-size-l
+  section
+    padding: 10px
+  footer
+    padding: 10px 20px 30px
+    text-align: center
+    +breakpoint($maxHeight: 600px)
+      padding: 5px
+    .icon
+      margin-right: 10px
